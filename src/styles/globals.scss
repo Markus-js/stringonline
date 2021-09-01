@@ -1,0 +1,154 @@
+@import "./colors.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+    background: black;
+    color: $main-text-color;
+    position: relative;
+}
+h1, 
+h2,
+h3,
+h4 {
+   color: #fff;
+   margin-bottom: 20px;
+}
+h2{
+  font-size: 18px;
+}
+h3{
+  font-size: 14px;
+}
+p, .convertPureHTML{
+  color: $main-text-color;
+  font-size: 14px;
+  cursor:default;
+}
+span{
+  cursor: pointer;
+  color: $main-interaction-color;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "TitilliumWeb-Light";
+  color: $main-text-color;
+ 
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+.btn{
+  outline: none;
+  border: 1px solid $main-interaction-color;
+  background: $main-interaction-color;
+  cursor: pointer;
+  &__header,
+  &__cart{
+    border-radius: 5%;
+  }
+  &__cart{
+    background: $main-btn-color;
+    border: 1px solid $main-btn-color;
+    color: #fff;
+  }
+}
+input {
+  border: 1px solid $main-interaction-box-border-color;
+  background-color: #0A1D1C;
+  color: $main-interaction-color;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $main-interaction-color;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $main-interaction-color;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $main-interaction-color;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $main-interaction-color;
+  }
+}
+
+// @font-face {
+//   font-family: "TitilliumWeb-Black";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-Black.ttf");
+//   font-style: normal;
+//   font-weight: bolder;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-Bold";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-Bold.ttf");
+//   font-style: normal;
+//   font-weight: bold;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-BoldItalic";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-BoldItalic.ttf");
+//   font-style: italic;
+//   font-weight: bold;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-ExtraLightItalic";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-ExtraLightItalic.ttf");
+//   font-style: italic;
+//   font-weight: lighter;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-ExtraLight";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-ExtraLight.ttf");
+//   font-style: normal;
+//   font-weight: lighter;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-Italic";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-Italic.ttf");
+//   font-style: italic;
+//   font-weight: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-Light";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-Light.ttf");
+//   font-style: normal;
+//   font-weight: 200;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-Regular";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-Regular.ttf");
+//   font-style: normal;
+//   font-weight: normal;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-SemiBold";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf");
+//   font-style: normal;
+//   font-weight: 600;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: "TitilliumWeb-SemiBoldItalic";
+//   src: url("/fonts/Titillium_Web/TitilliumWeb-SemiBoldItalic.ttf");
+//   font-style: italic;
+//   font-weight: 600;
+//   font-display: swap;
+// }

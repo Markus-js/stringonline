@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Frontpage from './pages/frontpage/Frontpage';
+import { Navigation } from './components/navigation/Navigation';
+import ProductPage from './pages/productPage/ProductPage';
+import LoginPage from './pages/loginPage/LoginPage';
+import Footer from "./components/footer/Footer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route path="/frontpage">
+          <Frontpage />
+        </Route>
+        <Route path="/productpage">
+          <ProductPage />
+        </Route>
+        <Route path="/loginpage">
+          <LoginPage />
+        </Route>
+        <Route exact path="/">
+          <Redirect to="/frontpage"></Redirect>
+        </Route>
+        {/* skal være i bunden ellers rammer path den samme / */}
+        <Route path="/">
+          <h2>404 siden findes ikke</h2>
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
