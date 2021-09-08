@@ -1,13 +1,16 @@
 
 
-export async function doFetch(url, type, data) {
+export async function doFetch(url, type, data, token = null) {
 
     let method = type || "GET"
     let body = data || null
 
     const option = {
         method: method,
-        body : body
+        body : body,
+        headers: {
+            'authorization': `Bearer ${token}`
+        }
     }
 
     try {

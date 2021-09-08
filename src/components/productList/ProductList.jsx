@@ -28,7 +28,7 @@ export default function ProductList() {
    *    Returns an boolean to declared variable rotate
    *        if true set Style to rotate
    */
-  let rotate;
+  let rotate; 
   if (product.group) {
     let group = Object.values(product.group);
     let includesValue =

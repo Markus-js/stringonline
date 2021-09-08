@@ -4,6 +4,7 @@ import ProductList from "../../components/productList/ProductList";
 import ProductDetails from "../../components/productDetails/ProductDetails";
 import ProductNav from "../../components/productNav/ProductNav";
 import Style from "./productPage.module.scss";
+import brandDetails from "../../components/brandDetails/brandDetails";
 
 export default function ProductPage() {
   let { url } = useRouteMatch();
@@ -36,6 +37,9 @@ export default function ProductPage() {
         </Route>
         <Route exact path={`${url}/:category/:subCategory/:productId/:productId`} >
             <ProductDetails />
+        </Route>
+        <Route exact path={`${url}/brand/:category/:brandId`} >
+            <brandDetails />
         </Route>
       </Switch>
       {/* {`${url}/${category.title}/${sub.title}/${sub.id}`} */}

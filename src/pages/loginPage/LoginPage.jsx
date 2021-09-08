@@ -1,8 +1,8 @@
 import React from 'react'
-import {Login} from '../../components/login/Login'
+import LoginForm from "../../components/LoginForm/LoginForm"
 
 export default function LoginPage() {
     return (
-        <Login />
+        <LoginForm />
     )
 }

@@ -3,11 +3,14 @@ import { useParams } from "react-router-dom";
 import { doFetch } from "../../helpers/helper";
 import Style from "./productDetails.module.scss";
 import { Markup } from "interweave";
+import { useHistory } from "react-router-dom";
 
 export default function ProductDetails() {
   let { productId } = useParams();
   const [product, setProduct] = useState("");
 
+   
+  
   useEffect(() => {
     const getProductDetails = async () => {
       let url = `https://api.mediehuset.net/stringsonline/products/${productId}`;
@@ -16,6 +19,13 @@ export default function ProductDetails() {
     };
     getProductDetails();
   }, [productId]);
+
+    let history = useHistory();
+  
+    function handleClick() {
+      history.push("/loginpage");
+    }
+  
 
   return product ? (
     <section className={Style.product}>
@@ -52,7 +62,8 @@ export default function ProductDetails() {
             <img src={product.brand_image} alt={product.brand} />
           </div>
           <h3>Pris: DKK {product.price}</h3>
-          <button className="btn btn__cart">Læg i kurv</button>
+          <button  onClick={ handleClick} className="btn btn__cart">Læg i kurv</button>
+     
           <p>{product.stock}+ på lager</p>
           <p>{product.rating} </p>
         </div>

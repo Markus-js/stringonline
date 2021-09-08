@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { useForm  } from 'react-hook-form'
 import { doFetch } from '../../helpers/helper'
+import { useHistory } from "react-router-dom";
 import Style from './login.module.scss'
  
 export function Login() {
  
   const [message, setMessage] = useState("Login")
   const [loginData, setLoginData] = useState([])
+
+  let history = useHistory();
  
   const { register, handleSubmit, formState: { errors }, } = useForm();
  
@@ -34,7 +37,6 @@ export function Login() {
       sessionStorage.setItem("token", JSON.stringify(res))
       
       console.log(res);
- 
     }
     if (res.message === 'No authorization'){
       setMessage('Forkert brugernavn eller password - prøv igen')
@@ -50,6 +52,7 @@ export function Login() {
       let timer = setTimeout(() => {
         setMessage('Login')
         clearTimeout(timer)
+        // 
       }, 4000)
   }
   
@@ -59,6 +62,8 @@ export function Login() {
     }
     
   }, [])
+
+ 
  
   return (
     <>

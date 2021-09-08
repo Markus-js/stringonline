@@ -1,0 +1,43 @@
+@import "../../styles/colors.scss";
+
+.loginForm {
+
+    .loginForm_h2 {
+        padding: 20px 0;
+    }
+
+    .loginForm_p {
+        padding: 10px 0;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        
+        .loginForm_input {
+            width: 50%;
+            height: fit-content;
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: $main-interaction-box-border-color !important;
+        }
+    }
+
+    .loginForm_div {
+        margin-top: 20px;
+
+        .loginForm_button {
+            margin: 0 20px;
+            padding: 15px 20px;
+            background: $main-interaction-color;
+            border: none;
+
+            &:first-child {
+                margin: unset;
+                font-weight: 700;
+            }
+        }
+    }
+}

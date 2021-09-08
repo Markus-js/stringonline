@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Style from "./navigation.module.scss";
 import arrow from "../../assets/images/arrow.svg";
 import cart from "../../assets/images/cart-icon.svg";
@@ -6,6 +7,12 @@ import mail from "../../assets/images/mail-icon.svg";
 import phone from "../../assets/images/phone-icon.svg";
 
 export function Navigation() {
+
+  let history = useHistory();
+  function handleClick() {
+    history.push("/loginpage");
+  }
+
   return (
     <header className={Style.container}>
       <div className={Style.header__contact}>
