@@ -12,7 +12,7 @@ export default function ProductPage() {
   return (
     <>
       <header className={Style.productHeader}>
-        <h2>Vores elskede bagværk</h2>
+        <h2></h2>
         <p>Lorem ipsum</p>
       </header>
 
